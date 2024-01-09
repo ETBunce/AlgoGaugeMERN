@@ -5,8 +5,12 @@ This is Brad's tenure project.
 ## Contributers
 
 Ethan Bunce
+
+John DeGray
+
+Justin Singh
+
 Daxton Butler
-Some others
 
 ## Getting Started
 
