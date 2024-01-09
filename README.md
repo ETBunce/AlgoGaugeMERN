@@ -6,7 +6,7 @@ This is Brad's tenure project.
 
 Ethan Bunce
 
-John DeGray
+John DeGrey
 
 Justin Singh
 
