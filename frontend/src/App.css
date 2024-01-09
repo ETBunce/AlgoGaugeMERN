@@ -1,0 +1,380 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+:root {
+  --bs-primary: #492365;
+  --bs-primary-rgb: 73, 35, 101;
+
+  --bs-secondary: #cccac7;
+  --bs-secondary-rgb: 204, 202, 199;
+  --bs-success: #00bc00;
+  --bs-success-active: #025602;
+  --bs-success-rgb: 0, 188, 0;
+
+  --bs-danger-active: #8c0505;
+
+  --main-info: #448ffd;
+  --main-info-hover: #035ade;
+
+  --secondary-gray: #ababab;
+
+  --secondary-purple: #74538d;
+  --active-purple: #8f29db;
+  --disabled-purple: #341156;
+  --alt-purple: #73379f;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  color: var(--bs-primary);
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+h1 {
+  margin-bottom: 0;
+}
+
+.more-info {
+  color: var(--main-info);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.more-info:hover {
+  color: var(--main-info-hover);
+}
+
+.btn-primary {
+  --bs-btn-bg: var(--bs-primary);
+  --bs-btn-border-color: var(--secondary-purple);
+  --bs-btn-hover-bg: var(--secondary-purple);
+  --bs-btn-hover-border-color: var(--secondary-purple);
+  --bs-btn-active-bg: var(--active-purple);
+  --bs-btn-active-border-color: var(--active-purple);
+  --bs-btn-disabled-bg: var(--disabled-purple);
+  --bs-btn-disabled-border-color: var(--disabled-purple);
+}
+
+.btn-secondary {
+  color: var(--bs-primary);
+  --bs-btn-bg: #fff;
+  --bs-btn-border-color: var(--alt-purple);
+  --bs-btn-hover-bg: var(--alt-purple);
+  --bs-btn-hover-border-color: var(--alt-purple);
+  --bs-btn-active-bg: var(--active-purple);
+  --bs-btn-active-border-color: var(--active-purple);
+  --bs-btn-disabled-bg: var(--disabled-purple);
+  --bs-btn-disabled-border-color: var(--disabled-purple);
+}
+
+.btn-danger {
+  color: var(--bs-danger);
+  --bs-btn-bg: #fff;
+  --bs-btn-border-color: var(--bs-danger);
+  --bs-btn-hover-bg: var(--bs-danger);
+  --bs-btn-hover-border-color: var(--bs-danger);
+  --bs-btn-active-bg: var(--bs-danger-active);
+  --bs-btn-active-border-color: var(--bs-danger-active);
+  --bs-btn-disabled-bg: var(--disabled-purple);
+  --bs-btn-disabled-border-color: var(--disabled-purple);
+}
+
+.btn-success {
+  color: var(--bs-success);
+  --bs-btn-bg: #fff;
+  --bs-btn-border-color: var(--bs-success);
+  --bs-btn-hover-bg: var(--bs-success);
+  --bs-btn-hover-border-color: var(--bs-success);
+  --bs-btn-active-bg: var(--bs-success-active);
+  --bs-btn-active-border-color: var(--bs-success-active);
+  --bs-btn-disabled-bg: var(--disabled-purple);
+  --bs-btn-disabled-border-color: var(--disabled-purple);
+}
+
+.form-check-input:focus {
+  border-color: var(--secondary-purple) !important;
+  outline: 0 !important;
+  box-shadow: 0 0 0 0.25rem rgba(103, 2, 123, 0.263) !important;
+}
+
+.text-active-purple {
+  color: var(--active-purple) !important;
+}
+
+.bg-active-purple {
+  background-color: var(--active-purple) !important;
+}
+
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 15px;
+  background: var(--bs-primary);
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+  border-radius: 20px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.slider:hover,
+.slider:focus {
+  opacity: 1;
+}
+
+/* Slider for Chrome, Opera, etc... */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--bs-secondary);
+  cursor: pointer;
+  border: 5px solid #fff;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+/* Slider thumbnail for Firefox */
+.slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--bs-secondary);
+  cursor: pointer;
+  border: 5px solid #fff;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.slider-ticks div {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 1px;
+  background: #492365;
+  height: 10px;
+  line-height: 40px;
+  margin: 0 0 20px 0;
+  font-size: 0.5rem;
+}
+
+/* Chrome, Safari, Edge, Opera for number input */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox for number input */
+input[type="number"] {
+  -moz-appearance: textfield;
+  width: 100px;
+  color: var(--bs-primary);
+}
+
+/* Give box shadow when on focus for number and range inputs */
+input[type="number"]:focus,
+input[type="range"]:focus,
+input[type="search"]:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.25rem rgba(103, 2, 123, 0.263);
+}
+
+.brad-icon {
+  width: 50px;
+  height: 40px;
+  border-radius: 50%;
+  /* padding: 5px; */
+}
+
+.weber-logo-icon {
+  max-width: 700px;
+  /* height: 45px; */
+  /* padding: 5px; */
+}
+
+.navbar-toggler {
+  border: var(--bs-border-width) solid #fff;
+  font-size: 1.5rem;
+}
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 var(--bs-navbar-toggler-focus-width) var(--active-purple);
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 30 30%27%3e%3cpath stroke=%27rgba%28255, 255, 255, 255%29%27 stroke-linecap=%27round%27 stroke-miterlimit=%2710%27 stroke-width=%272%27 d=%27M4 7h22M4 15h22M4 23h22%27/%3e%3c/svg%3e");
+}
+
+.capstone {
+  position: relative;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-backdrop {
+  --bs-backdrop-bg: var(--secondary-gray);
+}
+
+.btn-close {
+  font-size: 1.5rem;
+  --bs-btn-close-bg: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27 fill=%27%23fff%27%3e%3cpath d=%27M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z%27/%3e%3c/svg%3e");
+}
+
+.btn-close:focus {
+  box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.858);
+}
+
+.visuals-modal {
+  max-width: 300px;
+}
+
+.attributes-table-font-size {
+  font-size: 0.9rem;
+}
+
+.table-primary {
+  --bs-table-color: #fff;
+  --bs-table-bg: var(--bs-primary);
+  --bs-table-border-color: #fff;
+  --bs-table-active-bg: var(--active-purple);
+  --bs-table-active-color: #fff;
+  --bs-table-hover-bg: var(--active-purple);
+  --bs-table-hover-color: #fff;
+}
+
+.table-secondary {
+  --bs-table-color: var(--bs-primary);
+  --bs-table-bg: var(--bs-secondary);
+  --bs-table-border-color: #fff;
+  --bs-table-active-bg: var(--active-purple);
+  --bs-table-active-color: #fff;
+  --bs-table-hover-bg: var(--active-purple);
+  --bs-table-hover-color: #fff;
+}
+
+.table-info {
+  --bs-table-color: var(--bs-primary);
+  --bs-table-bg: #fff;
+  --bs-table-border-color: var(--bs-primary);
+  --bs-table-active-bg: var(--active-purple);
+  --bs-table-active-color: #fff;
+  --bs-table-hover-bg: var(--bs-primary);
+  --bs-table-hover-color: #fff;
+}
+
+.table.history thead tr,
+.table.history thead tr th:not(:nth-child(2)):not(:nth-child(3)) {
+  border-width: 0px;
+}
+
+.table.history tbody tr:last-child {
+  border-bottom-width: 0px;
+}
+
+.table.history tbody tr td:first-child {
+  border-left-width: 0px;
+}
+
+.table.history tbody tr td:last-child {
+  border-right-width: 0px;
+}
+
+.table.result tbody tr:last-child {
+  border-bottom-width: 0px;
+}
+
+.table.result tbody tr td:first-child {
+  border-left-width: 0px;
+}
+
+.table.result tbody tr td:last-child {
+  border-right-width: 0px;
+}
+
+.dropdown {
+  transition: height 1s ease;
+  height: 0;
+  overflow: hidden;
+}
+.dropdown.active {
+  height: 500px;
+  overflow: scroll;
+}
+
+.slider-ticks {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px;
+}
+
+.fs-7 {
+  font-size: 8px;
+}
+
+.toast-container::-webkit-scrollbar {
+  display: none;
+}
+
+.toast-container {
+  height: 100vh;
+  overflow: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.toast {
+  border-radius: 0;
+}
+
+.toast:first-child {
+  margin-top: 100px;
+}
+
+.toast-header {
+  padding: 1rem;
+  background-color: var(--bs-primary);
+  color: #fff;
+  justify-content: space-between;
+}
+
+.flex-fill-card {
+  flex: 1 0 400px;
+}
+
+.visibility-hidden {
+  visibility: hidden;
+}
+
+@media (min-width: 576px) {
+  .slider-ticks div {
+    font-size: 0.75rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .capstone {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+  }
+}
